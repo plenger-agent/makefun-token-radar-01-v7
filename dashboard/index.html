@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar v7 — Peers' Record</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast-top">
+    <div>
+      <h1>Token Launch Radar <span class="vtag">v7 · Peers' Record</span></h1>
+      <p class="sub" id="derived">Pre-token protocols ranked by implied launch value. One regression, fitted at run time to the snapshot's own launched peers; every figure on this page is derived, nothing is hand-entered.</p>
+      <p class="modelline" id="modelline">MODEL: one OLS regression of log10(market cap) on the launched peers — its fitted terms are named in the integrity line below and priced live by model.js</p>
+      <p class="shrinkline" id="integrity">Fitted on the peers' record: the selection table, the walk-forward and the conformal coverage are printed in full under Method &amp; validation.</p>
+    </div>
+    <nav class="views">
+      <a href="#/board" data-nav="board">Board</a>
+      <a href="#/method" data-nav="method">Method &amp; validation</a>
+      <a href="#/universe" data-nav="universe">Universe ledger</a>
+    </nav>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="verify" id="verify"></div>
+</header>
+<main id="app"></main>
+<footer class="foot">
+  <p>Implied value is this entry's own model claim — the value the launched peers' pricing record assigns — not a prediction that a token will launch. A protocol listed here records no token in the snapshot; that is DefiLlama's record, not proof none exists. Farm plans are activity suggestions with estimated costs, not financial advice.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
